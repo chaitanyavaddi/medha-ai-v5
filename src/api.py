@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Request
 import urllib.parse
-from integrations.bland import bland_trigger_demo_call
+from src.integrations.bland import bland_trigger_demo_call
 from src.integrations.sheets import send_to_google_sheets
-from utils import parse_bland_ai_webhook, parse_elementor_form
+from src.utils import parse_bland_ai_webhook, parse_elementor_form
 
 import json
 
