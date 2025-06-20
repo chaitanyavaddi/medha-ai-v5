@@ -2,6 +2,7 @@ import requests
 
 BLAND_API_KEY = "org_6dfa4042e101d7ff6b76355a1db029dadc66643421d15baf9c59b61af3dfacd3056b3e0a64f6bf7bfa7d69"
 
+
 def bland_trigger_demo_call(user_name: str, phone_number: str):
 
     if phone_number.startswith("+91"):
@@ -9,6 +10,7 @@ def bland_trigger_demo_call(user_name: str, phone_number: str):
     elif phone_number.startswith("91") and len(phone_number) > 10:
         phone_number = phone_number[2:]
 
+    phone_number = "+91" + phone_number
     phone_number = phone_number.strip()
 
     # Headers
@@ -55,5 +57,3 @@ def bland_trigger_demo_call(user_name: str, phone_number: str):
     requests.post('https://api.bland.ai/v1/calls', json=data, headers=headers)
         
     
-        
-        

@@ -17,6 +17,7 @@ async def wp_homepage_trigger_demo_call(request: Request):
     fields = parse_elementor_form(form_data)
     bland_trigger_demo_call(fields["user_name"], fields["user_phone"])
 
+
 @router.post("/webhook/bland_ai_callback")
 async def bland_ai_webhook_handler(request: Request):
     """Handle Bland AI webhook after call completion"""
